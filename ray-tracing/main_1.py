@@ -18,15 +18,17 @@ paths = p_solver(scene, los=True, specular_reflection=True,
                 diffuse_reflection=False, refraction=False,
                 diffraction=True, edge_diffraction=True)
 
-# Compute coverage map
-cm = scene.coverage_map()
+# # Compute coverage map
+# cm = scene.coverage_map()
 
-# Render scene with coverage map and paths
-scene.render(paths=paths, coverage_map=cm)
+# # Render scene with coverage map and paths
+# scene.render(paths=paths, coverage_map=cm)
 
 # Convert paths to channel impulse responses
-p2c = paths.cir(sampling_frequency=1e6, scene=scene)
-a, tau = p2c(paths.as_tuple())
+a_rt, _ = paths.cir(sampling_frequency=1e6)
 
+a = paths.a[0].numpy() + 1j*paths.a[1].numpy()
+tau = paths.tau.numpy()
+doppler = paths.doppler.numpy()
 print(a)
 print(tau)
