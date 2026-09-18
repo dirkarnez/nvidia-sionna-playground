@@ -1,3 +1,6 @@
 sionna==2.1.0
 sionna-rt==2.1.0
+numpy==2.5.3
+matplotlib==3.11.2
+
 # sionna-rt-gui 0.1.1
