@@ -3,9 +3,8 @@
 
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 
-set PREFIX=D:\Softwares
-@REM set PREFIX=%DOWNLOADS_DIR%
-
+@REM set PREFIX=D:\Softwares
+set PREFIX=%DOWNLOADS_DIR%
 
 set SEVENZIP=C:\"Program Files"\7-Zip\7z.exe
 set PYTHON_DIR=%PREFIX%\python-3.13.9-amd64-portable
