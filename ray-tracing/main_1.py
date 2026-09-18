@@ -16,9 +16,9 @@ scene.rx_array = PlanarArray(num_cols=1, num_rows=2,
 
 # Compute propagation paths
 p_solver = PathSolver()
-paths = p_solver(scene, los=True, specular_reflection=True,
-                diffuse_reflection=False, refraction=False,
-                diffraction=True, edge_diffraction=True)
+paths = p_solver(scene, los=True, specular_reflection=True, 
+                 diffuse_reflection=False, refraction=False,
+                 diffraction=True, edge_diffraction=True)
 
 # # Compute coverage map
 # cm = scene.coverage_map()
